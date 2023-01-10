@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./library-styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/x-icon.jpg" />
+  </head>
+  <body>
+    <!-- App Drawer -->
+    <div class="drawer">
+      <div class="dashboard menuItem">
+        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M8 3H16C18.76 3 21 5.24 21 8V16C21 18.76 18.76 21 16 21H8C5.24 21 3 18.76 3 16V8C3 5.24 5.24 3 8 3Z"
+          />
+        </svg>
+        <h1>Dashboard</h1>
+      </div>
+      <a class="menuItem" href="/">
+        <img src="../images/home.png" alt="home" />
+        <h1>Home</h1>
+      </a>
+      <a class="menuItem" href="./library/library.html">
+        <img src="../images/book.png" alt="profile" />
+        <h1>Library</h1>
+      </a>
+      <div class="menuItem">
+        <img src="../images/message.png" alt="messages" />
+        <h1>Messages</h1>
+      </div>
+      <div class="menuItem">
+        <img src="../images/history.png" alt="history" />
+        <h1>History</h1>
+      </div>
+      <div class="menuItem">
+        <img src="../images/tasks.png" alt="tasks" />
+        <h1>Tasks</h1>
+      </div>
+      <div class="menuItem">
+        <img src="../images/communities.png" alt="Communities" />
+        <h1>Communities</h1>
+      </div>
+      <!-- Need extra spacing, so nth child. -->
+      <div class="menuItem">
+        <img src="../images/setings.png" alt="Settings" />
+        <h1>Settings</h1>
+      </div>
+      <div class="menuItem">
+        <img src="../images/support.png" alt="support" />
+        <h1>Support</h1>
+      </div>
+      <div class="menuItem">
+        <img src="../images/privacy.png" alt="privacy" />
+        <h1>Privacy</h1>
+      </div>
+    </div>
+
+    <!-- NavBar -->
+    <div class="navBar">
+      <!-- Top Section -->
+      <div class="topNav">
+        <!-- Search icon and Search Bar -->
+        <div class="search">
+          <div class="menuItem">
+            <img src="../images/search.png" alt="search" />
+          </div>
+          <input type="text" name="search" autocomplete="off" />
+        </div>
+        <div class="account">
+          <div class="menuIcon">
+            <img
+              src="../images/bell-ring-outline.png"
+              alt="bell-ring-outline"
+            />
+          </div>
+          <!-- avatar from Github -->
+          <div class="gh-avatar"></div>
+          <!-- our username -->
+          <p class="name">perez11abel</p>
+        </div>
+      </div>
+
+      <!-- Botton Section -->
+      <div class="bottom">
+        <!-- Profile details -->
+        <div class="profile">
+          <div class="gh-avatar"></div>
+          <div class="profile-name">
+            <p class="greeting">Hi there,</p>
+            <p class="name">
+              Abel <span class="username">(@perez11abel)</span>
+            </p>
+          </div>
+        </div>
+        <!-- Button Section -->
+        <div class="buttons">
+          <button class="btn add-book">New</button>
+          <button class="btn">Upload</button>
+          <button class="btn">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h3>Your Books</h3>
+      <div class="books">
+        <!-- Section for all project cards -->
+      </div>
+    </main>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-form">
+          <h1 class="form-title"></h1>
+          <form class="add-book-form">
+            <div class="modal-input-field">
+              <label for="book-title">Title:</label>
+              <input
+                type="text"
+                name="book-title"
+                id="book-title"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <label for="book-author">Author:</label>
+              <input
+                type="text"
+                name="book-author"
+                id="book-author"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <label for="book-pages">Pages:</label>
+              <input
+                type="number"
+                min="0"
+                name="book-pages"
+                id="book-pages"
+                class="modal-form-input"
+              />
+            </div>
+            <div class="modal-input-field">
+              <span class="modal-read">Read?</span>
+              <label class="container">
+                <input
+                  type="checkbox"
+                  name="book-read"
+                  id="book-read"
+                  class="checkmark"
+                />
+              </label>
+            </div>
+            <div class="submit-modal-form">
+              <button type="submit" class="btn form-add-button"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

@@ -1,251 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="reset.css"/>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/x-icon.jpg" />
+  </head>
+  <body>
     <!-- App Drawer -->
     <div class="drawer">
-        <div class="dashboard menuItem">
-            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M8 3H16C18.76 3 21 5.24 21 8V16C21 18.76 18.76 21 16 21H8C5.24 21 3 18.76 3 16V8C3 5.24 5.24 3 8 3Z" />
-            </svg>
-            <h1>Dashboard</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/home.png" alt="home">
-            <h1>Home</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/profile.png" alt="profile">
-            <h1>Profile</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/message.png" alt="messages">
-            <h1>Messages</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/history.png" alt="history">
-            <h1>History</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/tasks.png" alt="tasks">
-            <h1>Tasks</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/communities.png" alt="Communities">
-            <h1>Communities</h1>
-        </div>
-        <!-- Need extra spacing, so nth child. -->
-        <div class="dashboard menuItem">
-            <img src="./images/setings.png" alt="Settings">
-            <h1>Settings</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/support.png" alt="support">
-            <h1>Support</h1>
-        </div>
-        <div class="dashboard menuItem">
-            <img src="./images/privacy.png" alt="privacy">
-            <h1>Privacy</h1>
-        </div>
+      <div class="dashboard menuItem">
+        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M8 3H16C18.76 3 21 5.24 21 8V16C21 18.76 18.76 21 16 21H8C5.24 21 3 18.76 3 16V8C3 5.24 5.24 3 8 3Z"
+          />
+        </svg>
+        <h1>Dashboard</h1>
+      </div>
+      <a class="menuItem">
+        <img src="./images/home.png" alt="home" />
+        <h1>Home</h1>
+      </a>
+      <a class="menuItem" href="./library/library.html">
+        <img src="./images/book.png" alt="profile" />
+        <h1>Library</h1>
+      </a>
+      <div class="menuItem">
+        <img src="./images/message.png" alt="messages" />
+        <h1>Messages</h1>
+      </div>
+      <div class="menuItem">
+        <img src="./images/history.png" alt="history" />
+        <h1>History</h1>
+      </div>
+      <div class="menuItem">
+        <img src="./images/tasks.png" alt="tasks" />
+        <h1>Tasks</h1>
+      </div>
+      <div class="menuItem">
+        <img src="./images/communities.png" alt="Communities" />
+        <h1>Communities</h1>
+      </div>
+      <!-- Need extra spacing, so nth child. -->
+      <div class="menuItem">
+        <img src="./images/setings.png" alt="Settings" />
+        <h1>Settings</h1>
+      </div>
+      <div class="menuItem">
+        <img src="./images/support.png" alt="support" />
+        <h1>Support</h1>
+      </div>
+      <div class="menuItem">
+        <img src="./images/privacy.png" alt="privacy" />
+        <h1>Privacy</h1>
+      </div>
     </div>
 
     <!-- NavBar -->
     <div class="navBar">
-
-        <!-- Top Section -->
-        <div class="topNav">
-            <!-- Search icon and Search Bar -->
-            <div class="search">
-                <div class="menuItem">
-                    <img src="./images/search.png" alt="search">
-                </div>
-                <input type="text" name="search" autocomplete="off">
-            </div>
-            <div class="account">
-                <div class="menuIcon">
-                    <img src="./images/bell-ring-outline.png" alt="bell-ring-outline">
-                </div>
-                <!-- avatar from Github -->
-                <div class="gh-avatar"></div>
-                    <!-- our username -->
-                    <p class="name">perez11abel</p>
-            </div>
+      <!-- Top Section -->
+      <div class="topNav">
+        <!-- Search icon and Search Bar -->
+        <div class="search">
+          <div class="menuItem">
+            <img src="./images/search.png" alt="search" />
+          </div>
+          <input type="text" name="search" autocomplete="off" />
         </div>
-
-        <!-- Botton Section -->
-        <div class="bottom">
-            <!-- Profile details -->
-            <div class="profile">
-                <div class="gh-avatar"></div>
-                <div class="profile-name">
-                    <p class="greeting">Hi there,</p>
-                    <p class="name">Abel <span class="username">(@perez11abel)</span></p>
-                </div>
-            </div>
-            <!-- Button Section -->
-            <div class="buttons">
-                <button class="btn">New</button>
-                <button class="btn">Upload</button>
-                <button class="btn">Share</button>
-            </div>
+        <div class="account">
+          <div class="menuIcon">
+            <img src="./images/bell-ring-outline.png" alt="bell-ring-outline" />
+          </div>
+          <!-- avatar from Github -->
+          <div class="gh-avatar"></div>
+          <!-- our username -->
+          <p class="name">perez11abel</p>
         </div>
+      </div>
+
+      <!-- Botton Section -->
+      <div class="bottom">
+        <!-- Profile details -->
+        <div class="profile">
+          <div class="gh-avatar"></div>
+          <div class="profile-name">
+            <p class="greeting">Hi there,</p>
+            <p class="name">
+              Abel <span class="username">(@perez11abel)</span>
+            </p>
+          </div>
+        </div>
+        <!-- Button Section -->
+        <div class="buttons">
+          <button class="btn">New</button>
+          <button class="btn">Upload</button>
+          <button class="btn">Share</button>
+        </div>
+      </div>
     </div>
-    
 
     <!-- Main Content -->
     <main class="content">
-        <div class="projects">
-            <h3>Your Projects</h3>
+      <div class="projects">
+        <h3>Your Projects</h3>
 
-            <!-- Section for all project cards -->
-            <div class="cards">
-                <!-- Each individual card, we need 6 cards -->
-                <div class="card">
-                    <h5 class="card-title">Super Cool Project</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-title">Less Cool Project</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-title">Impossible App</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-title">Easy Peasy App</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-title">Ad Blocker</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="card-title">Money Maker</h5>
-                    <p class="card-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
-                    </p>
-                    <div class="icons">
-                        <img src="./images/star.png" alt="star">
-                        <img src="./images/eye.png" alt="eye">
-                        <img src="./images/share.png" alt="share">
-                    </div>
-                </div>
+        <!-- Section for all project cards -->
+        <div class="cards">
+          <!-- Each individual card, we need 6 cards -->
+          <div class="card">
+            <h5 class="card-title">Super Cool Project</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
             </div>
+          </div>
+          <div class="card">
+            <h5 class="card-title">Less Cool Project</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-title">Impossible App</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-title">Easy Peasy App</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-title">Ad Blocker</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-title">Money Maker</h5>
+            <p class="card-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis amet repellat ipsam debitis quos cupiditate adipisci.
+            </p>
+            <div class="icons">
+              <img src="./images/star.png" alt="star" />
+              <img src="./images/eye.png" alt="eye" />
+              <img src="./images/share.png" alt="share" />
+            </div>
+          </div>
         </div>
-        <!-- Side Content, Announcements and trending -->
-        <div class="announcements">
-            <ul class="card">
-                <h3>Announcements</h3>
-                <!-- list of individual announcements -->
-                <li class="announcement">
-                    <h5 class="card-title">Site Maintenance</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga nisi quos voluptas laudantium provident.
-                    </p>
-                </li>
-                <li class="announcement">
-                    <h5 class="card-title">Community Share Day</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga nisi quos voluptas laudantium provident.
-                    </p>
-                </li>
-                <li class="announcement">
-                    <h5 class="card-title">Updated Privacy Policy</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga nisi quos voluptas laudantium provident.
-                    </p>
-                </li>
-            </ul>
-        </div>   
-            
-            <!-- Trending Section -->
-            <div class="trending">
-                <h3>Trending</h3>
-                <ul class="card">
-                    <!-- List of all trending people -->
-                    <li class="trend trend-1">
-                        <div class="gh-avatar2"></div>
-                        <div class="account">
-                            <p class="username">@tegan</p>
-                            <p class="name card-text">World Peace Builder</p>
-                        </div>
-                    </li>
-                    <li class="trend trend-2">
-                        <div class="gh-avatar"></div>
-                        <div class="account">
-                            <p class="username">@perez11abel</p>
-                            <p class="name card-text">Super Cool Project</p>
-                        </div>
-                    </li>
-                    <li class="trend trend-3">
-                        <div class="gh-avatar3"></div>
-                        <div class="account">
-                            <p class="username">@kendall</p>
-                            <p class="name card-text">Life Changing App</p>
-                        </div>
-                    </li>
-                    <li class="trend trend-4">
-                        <div class="gh-avatar4"></div>
-                        <div class="account">
-                            <p class="username">@alex</p>
-                            <p class="name card-text">No Traffic Maker</p>
-                        </div>
-                    </li>
-                </ul>
+      </div>
+      <!-- Side Content, Announcements and trending -->
+      <div class="announcements">
+        <ul class="card">
+          <h3>Announcements</h3>
+          <!-- list of individual announcements -->
+          <li class="announcement">
+            <h5 class="card-title">Site Maintenance</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              fuga nisi quos voluptas laudantium provident.
+            </p>
+          </li>
+          <li class="announcement">
+            <h5 class="card-title">Community Share Day</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              fuga nisi quos voluptas laudantium provident.
+            </p>
+          </li>
+          <li class="announcement">
+            <h5 class="card-title">Updated Privacy Policy</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              fuga nisi quos voluptas laudantium provident.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Trending Section -->
+      <div class="trending">
+        <h3>Trending</h3>
+        <ul class="card">
+          <!-- List of all trending people -->
+          <li class="trend trend-1">
+            <div class="gh-avatar2"></div>
+            <div class="account">
+              <p class="username">@tegan</p>
+              <p class="name card-text">World Peace Builder</p>
             </div>
+          </li>
+          <li class="trend trend-2">
+            <div class="gh-avatar"></div>
+            <div class="account">
+              <p class="username">@perez11abel</p>
+              <p class="name card-text">Super Cool Project</p>
+            </div>
+          </li>
+          <li class="trend trend-3">
+            <div class="gh-avatar3"></div>
+            <div class="account">
+              <p class="username">@kendall</p>
+              <p class="name card-text">Life Changing App</p>
+            </div>
+          </li>
+          <li class="trend trend-4">
+            <div class="gh-avatar4"></div>
+            <div class="account">
+              <p class="username">@alex</p>
+              <p class="name card-text">No Traffic Maker</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </main>
-</body>
-<script src="main.js"></script>
+  </body>
+  <!-- <script src="main.js"></script> -->
 </html>
